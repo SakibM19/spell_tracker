@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:text="Spell Tracker"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:text="This app tracks spelling mistakes ONLY through its own keyboard, and only after you turn tracking on below. No screen content, apps, or other text is ever read."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:text="Step 1: Enable tracking (consent)"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/consentSwitch"
+        android:text="Track my spelling mistakes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:text="Step 2: Turn on the Spell Tracker keyboard"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/enableKeyboardButton"
+        android:text="Open Keyboard Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/chooseKeyboardButton"
+        android:text="Switch to Spell Tracker Keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:text="Step 3: Report frequency (hours)"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/intervalEditText"
+        android:hint="e.g. 8"
+        android:inputType="number"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/saveIntervalButton"
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/viewReportButton"
+        android:text="View Mistake Report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/practiceListButton"
+        android:text="My Practice List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
+</ScrollView>
