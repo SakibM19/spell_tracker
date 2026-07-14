@@ -19,6 +19,7 @@ class MistakeAdapter(
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val wordText: TextView = view.findViewById(R.id.wordText)
+        val suggestionText: TextView = view.findViewById(R.id.suggestionText)
         val timeText: TextView = view.findViewById(R.id.timeText)
         val addToPracticeButton: Button = view.findViewById(R.id.addToPracticeButton)
         val deleteButton: ImageButton = view.findViewById(R.id.deleteMistakeButton)
@@ -33,6 +34,7 @@ class MistakeAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.wordText.text = item.word
+        holder.suggestionText.text = item.suggestion ?: "no suggestion"
         holder.timeText.text = DateUtils.getRelativeTimeSpanString(item.timestamp)
         holder.addToPracticeButton.setOnClickListener { onAddToPractice(item) }
         holder.deleteButton.setOnClickListener {

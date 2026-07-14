@@ -225,7 +225,8 @@ class SpellTrackerIME : InputMethodService() {
             val inDictionary = (info.suggestionsAttributes and SuggestionsInfo.RESULT_ATTR_IN_THE_DICTIONARY) != 0
 
             if (looksLikeTypo && !inDictionary) {
-                saveMistake(word)
+                val topSuggestion = if (info.suggestionsCount > 0) info.getSuggestionAt(0) else null
+                saveMistake(word, topSuggestion)
             }
         }
 
@@ -234,9 +235,9 @@ class SpellTrackerIME : InputMethodService() {
         }
     }
 
-    private fun saveMistake(word: String) {
+    private fun saveMistake(word: String, suggestion: String?) {
         serviceScope.launch(Dispatchers.IO) {
-            db.mistakeDao().insert(MistakeWord(word = word, timestamp = System.currentTimeMillis()))
+            db.mistakeDao().insert(MistakeWord(word = word, suggestion = suggestion, timestamp = System.currentTimeMillis()))
         }
     }
 

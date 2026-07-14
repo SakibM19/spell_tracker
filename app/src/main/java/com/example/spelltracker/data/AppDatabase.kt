@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [MistakeWord::class, PracticeWord::class], version = 1, exportSchema = false)
+@Database(entities = [MistakeWord::class, PracticeWord::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun mistakeDao(): MistakeDao
@@ -21,7 +21,11 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "spell_tracker_db"
-                ).build()
+                )
+                    // Simple personal app — if the schema changes, just start fresh
+                    // rather than writing a formal migration.
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 instance
             }

@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class MistakeWord(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val word: String,
+    val suggestion: String?, // the spell checker's closest correct word, if any
     val timestamp: Long
 )

@@ -53,8 +53,9 @@ class ReportActivity : AppCompatActivity() {
     }
 
     private fun addToPractice(mistake: MistakeWord) {
+        val correctWord = mistake.suggestion ?: mistake.word
         lifecycleScope.launch {
-            db.practiceDao().insert(PracticeWord(word = mistake.word, addedDate = System.currentTimeMillis()))
+            db.practiceDao().insert(PracticeWord(word = correctWord, addedDate = System.currentTimeMillis()))
         }
     }
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Spell Tracker</string>
+    <string name="accessibility_service_description">Checks the words you type for spelling mistakes. Only misspelled words and the time are saved — no other typed text is read, stored, or sent anywhere.</string>
 </resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Midnight Blue -->
+    <color name="midnight_blue">#1B2A4A</color>
+    <color name="midnight_blue_dark">#101B33</color>
+    <color name="midnight_blue_light">#2E4269</color>
+
+    <!-- Earth Green -->
+    <color name="earth_green">#6B8F71</color>
+    <color name="earth_green_dark">#517457</color>
+    <color name="earth_green_light">#A9C4AC</color>
+
+    <!-- Beige -->
+    <color name="beige">#F3EEE2</color>
+    <color name="beige_light">#FBF9F3</color>
+    <color name="beige_dark">#E4DAC4</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1B2A4A</color>
+    <color name="text_secondary">#6E6555</color>
+    <color name="text_on_dark">#F3EEE2</color>
+    <color name="text_on_dark_muted">#C7CEDB</color>
+
+    <!-- Utility -->
+    <color name="mistake_red">#B85C50</color>
+    <color name="transparent">#00000000</color>
+</resources>
