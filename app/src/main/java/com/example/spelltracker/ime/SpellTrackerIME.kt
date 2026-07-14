@@ -23,13 +23,14 @@ import kotlinx.coroutines.SupervisorJob
 /**
  * A minimal custom keyboard.
  *
- * Why a custom keyboard instead of an Accessibility Service:
- * - The user has to deliberately switch to this keyboard, which IS the consent step.
- * - This service only ever sees characters typed while THIS keyboard is active.
- *   It cannot read other apps' screens, other keyboards' input, or anything
- *   outside of what is typed here.
- * - Only words flagged as misspelled are saved (just the word + a timestamp).
- *   The full sentence / message content is never stored.
+ * The user has to deliberately switch to this keyboard, which IS the consent
+ * step: this service only ever sees characters typed while THIS keyboard is
+ * active. It cannot read other apps' screens, other keyboards' input, or
+ * anything outside of what is typed here.
+ *
+ * Only words flagged as misspelled are saved (just the word, the closest
+ * correct spelling, and a timestamp). The full sentence / message content is
+ * never stored.
  */
 class SpellTrackerIME : InputMethodService() {
 

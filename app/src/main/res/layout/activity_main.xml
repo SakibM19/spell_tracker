@@ -113,7 +113,7 @@
                     android:padding="20dp">
 
                     <TextView
-                        android:text="Step 2 · Turn on tracking"
+                        android:text="Step 2 · Turn on the Spell Tracker keyboard"
                         android:textColor="@color/earth_green_dark"
                         android:textStyle="bold"
                         android:textSize="12sp"
@@ -121,7 +121,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:text="Works with any keyboard you already use."
+                        android:text="Enable it once, then switch to it whenever you're typing."
                         android:textColor="@color/text_secondary"
                         android:textSize="14sp"
                         android:layout_marginTop="6dp"
@@ -130,30 +130,8 @@
                         android:layout_height="wrap_content" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/enableAccessibilityButton"
-                        style="@style/Widget.SpellTracker.Button.Primary"
-                        android:text="Open Accessibility Settings"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/beige_dark"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginBottom="14dp" />
-
-                    <TextView
-                        android:text="Or use Spell Tracker's own keyboard instead (optional)"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="13sp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/enableKeyboardButton"
-                        style="@style/Widget.SpellTracker.Button.Outlined"
+                        style="@style/Widget.SpellTracker.Button.Primary"
                         android:text="Open Keyboard Settings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

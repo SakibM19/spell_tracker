@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         requestNotificationPermissionIfNeeded()
 
         val consentSwitch = findViewById<SwitchMaterial>(R.id.consentSwitch)
-        val enableAccessibilityButton = findViewById<Button>(R.id.enableAccessibilityButton)
         val enableKeyboardButton = findViewById<Button>(R.id.enableKeyboardButton)
         val chooseKeyboardButton = findViewById<Button>(R.id.chooseKeyboardButton)
         val intervalEditText = findViewById<EditText>(R.id.intervalEditText)
@@ -49,10 +48,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 prefs.consentGiven = false
             }
-        }
-
-        enableAccessibilityButton.setOnClickListener {
-            startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
         }
 
         enableKeyboardButton.setOnClickListener {
@@ -90,12 +85,11 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle("Enable spelling tracking?")
             .setMessage(
-                "When you turn this on and enable Spell Tracker in Accessibility " +
-                "Settings, the app will check words you type — in any app, with any " +
-                "keyboard — against the device's built-in spell checker. Only words " +
-                "flagged as misspelled are saved (the word itself and the time), so " +
-                "they can appear in your report and practice list. No other text you " +
-                "type is stored or sent anywhere."
+                "When you turn this on and switch to the Spell Tracker keyboard, " +
+                "the app will check each word you type for spelling mistakes using " +
+                "the device's built-in spell checker. Only words flagged as misspelled " +
+                "are saved (the word itself and the time), so they can appear in your " +
+                "report and practice list. No other text you type is stored or sent anywhere."
             )
             .setPositiveButton("I agree") { _, _ ->
                 prefs.consentGiven = true
